@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "SDS",
+    "BCB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:quartz"
+    },
+    "C": {
+      "item": "minecraft:iron_block"
+    },
+    "S": {
+      "tag": "minecraft:terracotta"
+    },
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "D": {
+      "item": "tpap:large_mold"
+    }
+  },
+  "result": {
+    "item": "tpap:huge_mold"
+  }
+}

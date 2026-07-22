@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "ADA",
+    "BCB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:clay"
+    },
+    "C": {
+      "item": "minecraft:iron_bars"
+    },
+    "A": {
+      "item": "minecraft:brick"
+    },
+    "B": {
+      "item": "minecraft:wheat"
+    },
+    "S": {
+      "item": "minecraft:leather"
+    },
+    "D": {
+      "item": "tpap:small_mold"
+    }
+  },
+  "result": {
+    "item": "tpap:medium_mold"
+  }
+}

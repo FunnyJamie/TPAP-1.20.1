@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "AAA",
+    "BCB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "C": {
+      "item": "minecraft:iron_bars"
+    },
+    "A": {
+      "item": "minecraft:clay_ball"
+    },
+    "B": {
+      "tag": "minecraft:wool"
+    },
+    "S": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "item": "tpap:small_mold"
+  }
+}

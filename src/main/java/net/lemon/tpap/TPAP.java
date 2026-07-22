@@ -1,6 +1,8 @@
 package net.lemon.tpap;
 
 import com.mojang.logging.LogUtils;
+import net.lemon.tpap.registry.ModCreativeModeTabs;
+import net.lemon.tpap.registry.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,6 +25,9 @@ public class TPAP
 
     public TPAP(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

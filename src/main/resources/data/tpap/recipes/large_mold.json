@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "ADA",
+    "BCB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:clay"
+    },
+    "C": {
+      "item": "minecraft:iron_block"
+    },
+    "A": {
+      "tag": "minecraft:terracotta"
+    },
+    "B": {
+      "item": "minecraft:hay_block"
+    },
+    "S": {
+      "item": "minecraft:iron_bars"
+    },
+    "D": {
+      "item": "tpap:medium_mold"
+    }
+  },
+  "result": {
+    "item": "tpap:large_mold"
+  }
+}

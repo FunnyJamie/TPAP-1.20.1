@@ -1,0 +1,6 @@
+### Below is how you add more items
+1. register the item in ModItems. Copy an existing registry
+2. Add the item texture to assets -> textures -> items folder
+3. Add the en_us.json Lang entry
+4. Add the model json in assets -> models -> item. the name of the new json must match the registry name.
+5. Add to the Corresponding creative tab's list.
