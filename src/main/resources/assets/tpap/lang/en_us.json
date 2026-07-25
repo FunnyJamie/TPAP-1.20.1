@@ -7,7 +7,20 @@
   "item.tpap.huge_mold": "Huge Mold",
   "item.tpap.plane_mold": "Plane Mold",
   "item.tpap.pole": "Pole",
+  "item.tpap.blueprint": "Blueprint",
+
+  "genus.tpap.triceratops": "Triceratops",
+
+  "moldsize.tpap.small": "Small",
+  "moldsize.tpap.medium": "Medium",
+  "moldsize.tpap.large": "Large",
+  "moldsize.tpap.huge": "Huge",
+
+  "tooltip.tpap.blueprint.mold": "Requires %s Mold (or larger statues' sizes vary)",
+  "tooltip.tpap.blueprint.unknown": "Unknown genus",
+
   "creativetab.items_tab": "TPaP Items",
-  "creativetab.statues_tab": "TPaP Statues"
+  "creativetab.statues_tab": "TPaP Statues",
+  "creativetab.blueprints_tab": "Blueprints Tab"
 
 }

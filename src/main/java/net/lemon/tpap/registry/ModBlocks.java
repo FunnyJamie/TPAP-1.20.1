@@ -2,6 +2,7 @@ package net.lemon.tpap.registry;
 
 import net.lemon.tpap.TPAP;
 import net.lemon.tpap.block.StatueBlock;
+import net.lemon.tpap.item.MoldSize;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,25 +15,36 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TPAP.MODID);
 
+    /** All registered statues. Drives the shared BE type's valid blocks and the creative tab. */
     public static final List<RegistryObject<StatueBlock>> STATUES = new ArrayList<>();
     public static final List<RegistryObject<Item>> STATUE_ITEMS = new ArrayList<>();
+    public static final Map<String, List<StatueEntry>> GENUS_MAP = new LinkedHashMap<>();
 
-    //Add Statues below: registerStatue(statueId, poseCount, proppable)
-    public static final RegistryObject<StatueBlock> TRICERATOPS_HORRIDUS = registerStatue("triceratops_horridus", 5, false);
+    public record StatueEntry(String statueId, String genus, MoldSize moldSize,
+                              RegistryObject<StatueBlock> block, RegistryObject<Item> item) {
+    }
+
+    //Add Statues below: registerStatue(statueId, genus, poseCount, proppable, moldSize)
+    public static final RegistryObject<StatueBlock> TRICERATOPS_HORRIDUS = registerStatue("triceratops_horridus", "triceratops", 5, false, MoldSize.LARGE);
 
 
 
 
 
 
-    private static RegistryObject<StatueBlock> registerStatue(String statueId, int poseCount, boolean proppable) {
+
+    private static RegistryObject<StatueBlock> registerStatue(String statueId, String genus, int poseCount,
+                                                              boolean proppable, MoldSize moldSize) {
         RegistryObject<StatueBlock> block = BLOCKS.register(statueId,
-                () -> new StatueBlock(statueId, poseCount, proppable, BlockBehaviour.Properties.of()
+                () -> new StatueBlock(statueId, genus, poseCount, proppable, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.STONE)
                         .sound(SoundType.STONE)
                         .strength(1.5F, 6.0F)
@@ -40,7 +52,18 @@ public class ModBlocks {
         RegistryObject<Item> item = ModItems.ITEMS.register(statueId, () -> new BlockItem(block.get(), new Item.Properties()));
         STATUES.add(block);
         STATUE_ITEMS.add(item);
+        GENUS_MAP.computeIfAbsent(genus, g -> new ArrayList<>())
+                .add(new StatueEntry(statueId, genus, moldSize, block, item));
         return block;
+    }
+
+    /** Largest mold size any statue of the genus requires (blueprint tooltip). */
+    public static Optional<MoldSize> largestMoldFor(String genus) {
+        List<StatueEntry> entries = GENUS_MAP.get(genus);
+        if (entries == null || entries.isEmpty()) {
+            return Optional.empty();
+        }
+        return entries.stream().map(StatueEntry::moldSize).max(Enum::compareTo);
     }
 
     public static void register(IEventBus eventBus) {

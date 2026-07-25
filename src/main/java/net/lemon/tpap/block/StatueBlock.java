@@ -35,12 +35,14 @@ public class StatueBlock extends Block implements EntityBlock, SimpleWaterlogged
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     private final String statueId;
+    private final String genus;
     private final int poseCount;
     private final boolean proppable;
 
-    public StatueBlock(String statueId, int poseCount, boolean proppable, Properties properties) {
+    public StatueBlock(String statueId, String genus, int poseCount, boolean proppable, Properties properties) {
         super(properties);
         this.statueId = statueId;
+        this.genus = genus;
         this.poseCount = poseCount;
         this.proppable = proppable;
         this.registerDefaultState(this.stateDefinition.any()
@@ -50,6 +52,10 @@ public class StatueBlock extends Block implements EntityBlock, SimpleWaterlogged
 
     public String getStatueId() {
         return this.statueId;
+    }
+
+    public String getGenus() {
+        return this.genus;
     }
 
     public int getPoseCount() {

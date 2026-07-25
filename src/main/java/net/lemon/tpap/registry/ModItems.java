@@ -1,6 +1,7 @@
 package net.lemon.tpap.registry;
 
 import net.lemon.tpap.TPAP;
+import net.lemon.tpap.item.BlueprintItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item> HUGE_MOLD = ITEMS.register("huge_mold", () -> new Item(new Item.Properties().durability(100)));
     public static final RegistryObject<Item> PLANE_MOLD = ITEMS.register("plane_mold", () -> new Item(new Item.Properties().durability(100)));
     public static final RegistryObject<Item> POLE = ITEMS.register("pole", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLUEPRINT = ITEMS.register("blueprint", () -> new BlueprintItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
