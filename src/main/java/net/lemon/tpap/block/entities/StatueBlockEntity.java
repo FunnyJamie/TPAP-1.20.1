@@ -35,12 +35,22 @@ public class StatueBlockEntity extends BlockEntity implements GeoBlockEntity {
         return this.pose;
     }
 
+    public String getStatueId() {
+        return this.getBlockState().getBlock() instanceof StatueBlock statue ? statue.getStatueId() : "missing";
+    }
+
     public int getPoseCount() {
         return this.getBlockState().getBlock() instanceof StatueBlock statue ? statue.getPoseCount() : 1;
     }
 
     public void cyclePose() {
         this.pose = (this.pose + 1) % this.getPoseCount();
+        this.markUpdated();
+    }
+
+    public void resetToPlacementDefaults() {
+        this.pose = 0;
+        this.propped = false;
         this.markUpdated();
     }
 
@@ -109,8 +119,6 @@ public class StatueBlockEntity extends BlockEntity implements GeoBlockEntity {
 
     @Override
     public AABB getRenderBoundingBox() {
-        // Generous box so tall/wide models (e.g. a giraffe) aren't culled
-        // when the base block leaves the camera frustum.
-        return new AABB(this.worldPosition).inflate(2.0, 0.0, 2.0).expandTowards(0.0, 5.0, 0.0);
+        return new AABB(this.worldPosition).inflate(8.0, 8.0, 8.0).expandTowards(0.0, 5.0, 0.0);
     }
 }
