@@ -14,7 +14,8 @@ public class TPAPItems {
             ModItems.LARGE_MOLD,
             ModItems.MEDIUM_MOLD,
             ModItems.SMALL_MOLD,
-            ModItems.PLANE_MOLD
+            ModItems.PLANE_MOLD,
+            ModItems.POLE
 
 
     );
