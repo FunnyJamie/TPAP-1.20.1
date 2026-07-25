@@ -5,10 +5,10 @@
 			"loop": true
 		},
 		"pose0": {
-			"loop": true
+			"loop": "hold_on_last_frame"
 		},
 		"pose1": {
-			"loop": true,
+			"loop": "hold_on_last_frame",
 			"bones": {
 				"Jaw": {
 					"rotation": {
@@ -92,7 +92,7 @@
 			}
 		},
 		"pose2": {
-			"loop": true,
+			"loop": "hold_on_last_frame",
 			"bones": {
 				"Jaw": {
 					"rotation": {
@@ -168,7 +168,7 @@
 			}
 		},
 		"pose3": {
-			"loop": true,
+			"loop": "hold_on_last_frame",
 			"bones": {
 				"Head": {
 					"rotation": {
@@ -229,7 +229,7 @@
 			}
 		},
 		"pose4": {
-			"loop": true,
+			"loop": "hold_on_last_frame",
 			"bones": {
 				"Jaw": {
 					"rotation": {
