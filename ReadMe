@@ -4,3 +4,20 @@
 3. Add the en_us.json Lang entry
 4. Add the model json in assets -> models -> item. the name of the new json must match the registry name.
 5. Add to the Corresponding creative tab's list.
+
+### Below is how you add more statues
+# IMPORTANT. ALL Assets names are based on the statueId. they CANNOT diverge, or you will have problems.
+# ie: if the statueId is tyrannosaurus_rex, the texture should be tyrannosaurus_rex.png, the model should be tyrannosaurus_rex.geo, etc.
+1. register in the ModBlocks file, copy existing line, statueId is what all of your asset files should be prefixed with. poseCount is how many poses, proppable is if poles are allowed
+    a. MoldSize is what molding clay this statue requires. the genus key is what blueprint will allow crafting this statue
+2. add assets to their respective folders:
+    a. assets/tpap/animations -> export from bb
+    b. assets/tpap/blockstates -> copy an existing file, no need to change its contents, just rename it the statueId
+    c. assets/tpap/geo -> export from bb
+    d. assets/tpap/lang -> copy an existing lang entry, rename the lang key, and translation
+    e. assets/tpap/models/item -> copy an existing statue json, rename it the statueId, repoint the item icon to the right texture
+    f. assets/tpap/textures/block -> add texture file here, must be named the statueId
+    g. assets/tpap/textures/item -> add the item icon here. it can be suffixed with _icon
+    h. data/tpap/loot_tables/blocks -> copy existing loot table json, replace the dropped item with the right statueId
+
+That is quite literally it...
