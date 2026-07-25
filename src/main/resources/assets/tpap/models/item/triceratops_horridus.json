@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tpap:item/triceratops_horridus_icon.png"
+    "layer0": "tpap:item/triceratops_horridus_icon"
   }
 }

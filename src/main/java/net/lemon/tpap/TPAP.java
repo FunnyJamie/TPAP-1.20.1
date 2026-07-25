@@ -1,9 +1,13 @@
 package net.lemon.tpap;
 
 import com.mojang.logging.LogUtils;
+import net.lemon.tpap.client.StatueBlockRenderer;
+import net.lemon.tpap.registry.ModBlockEntities;
+import net.lemon.tpap.registry.ModBlocks;
 import net.lemon.tpap.registry.ModCreativeModeTabs;
 import net.lemon.tpap.registry.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -28,6 +32,8 @@ public class TPAP
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -61,6 +67,12 @@ public class TPAP
         public static void onClientSetup(FMLClientSetupEvent event)
         {
 
+        }
+
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event)
+        {
+            event.registerBlockEntityRenderer(ModBlockEntities.STATUE_BE.get(), StatueBlockRenderer::new);
         }
     }
 }

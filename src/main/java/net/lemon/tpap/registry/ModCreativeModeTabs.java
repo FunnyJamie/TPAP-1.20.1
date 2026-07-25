@@ -20,6 +20,13 @@ public class ModCreativeModeTabs {
                 TPAPItems.displayItems(pOutput);
             }).build());
 
+    public static final RegistryObject<CreativeModeTab> STATUES_TAB = TABS.register("statues_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TRICERATOPS_HORRIDUS.get()))
+                    .title(Component.translatable("creativetab.statues_tab"))
+                    .displayItems((pParameters, pOutput) ->
+                            ModBlocks.STATUE_ITEMS.forEach(item -> pOutput.accept(item.get()))
+                    ).build());
+
     public static void register(IEventBus eventBus) {
         TABS.register(eventBus);
     }
