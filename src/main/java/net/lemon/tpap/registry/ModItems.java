@@ -20,7 +20,7 @@ public class ModItems {
     public static final RegistryObject<Item> PLANE_MOLD = ITEMS.register("plane_mold", () -> new Item(new Item.Properties().durability(100)));
     public static final RegistryObject<Item> POLE = ITEMS.register("pole", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BLUEPRINT = ITEMS.register("blueprint", () -> new BlueprintItem(new Item.Properties()));
-    public static final RegistryObject<Item> SCULPTORS_STATION_ITEM = ModItems.ITEMS.register("sculptors_station", () -> new SculptorsStationItem(ModBlocks.SCULPTORS_STATION.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SCULPTORS_STATION_ITEM = ModItems.ITEMS.register("sculptors_station.json", () -> new SculptorsStationItem(ModBlocks.SCULPTORS_STATION.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

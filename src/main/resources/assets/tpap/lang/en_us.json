@@ -17,7 +17,6 @@
   "moldsize.tpap.large": "Large",
   "moldsize.tpap.huge": "Huge",
 
-  "tooltip.tpap.blueprint.mold": "Requires %s Mold",
   "tooltip.tpap.blueprint.unknown": "Unknown genus",
 
   "creativetab.items_tab": "TPaP Items",
