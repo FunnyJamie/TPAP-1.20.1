@@ -1,5 +1,6 @@
 package net.lemon.tpap.registry.creativetab;
 
+import net.lemon.tpap.registry.ModBlocks;
 import net.lemon.tpap.registry.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,8 @@ public class TPAPItems {
             ModItems.MEDIUM_MOLD,
             ModItems.SMALL_MOLD,
             ModItems.PLANE_MOLD,
-            ModItems.POLE
+            ModItems.POLE,
+            ModItems.SCULPTORS_STATION_ITEM
 
 
     );

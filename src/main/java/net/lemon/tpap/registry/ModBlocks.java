@@ -1,8 +1,10 @@
 package net.lemon.tpap.registry;
 
 import net.lemon.tpap.TPAP;
+import net.lemon.tpap.block.SculptorsStationBlock;
 import net.lemon.tpap.block.StatueBlock;
 import net.lemon.tpap.item.MoldSize;
+import net.lemon.tpap.item.SculptorsStationItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -39,7 +41,8 @@ public class ModBlocks {
 
 
 
-
+    public static final RegistryObject<SculptorsStationBlock> SCULPTORS_STATION = BLOCKS.register("sculptors_station",
+            () -> new SculptorsStationBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(2.5F).noOcclusion()));
 
     private static RegistryObject<StatueBlock> registerStatue(String statueId, String genus, int poseCount,
                                                               boolean proppable, MoldSize moldSize) {
@@ -55,15 +58,6 @@ public class ModBlocks {
         GENUS_MAP.computeIfAbsent(genus, g -> new ArrayList<>())
                 .add(new StatueEntry(statueId, genus, moldSize, block, item));
         return block;
-    }
-
-    /** Largest mold size any statue of the genus requires (blueprint tooltip). */
-    public static Optional<MoldSize> largestMoldFor(String genus) {
-        List<StatueEntry> entries = GENUS_MAP.get(genus);
-        if (entries == null || entries.isEmpty()) {
-            return Optional.empty();
-        }
-        return entries.stream().map(StatueEntry::moldSize).max(Enum::compareTo);
     }
 
     public static void register(IEventBus eventBus) {

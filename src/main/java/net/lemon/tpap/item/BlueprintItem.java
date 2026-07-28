@@ -45,8 +45,5 @@ public class BlueprintItem extends Item {
             return;
         }
         tooltip.add(Component.translatable("genus.tpap." + genus).withStyle(ChatFormatting.AQUA));
-        ModBlocks.largestMoldFor(genus).ifPresent(size ->
-                tooltip.add(Component.translatable("tooltip.tpap.blueprint.mold", size.getDisplayName())
-                        .withStyle(ChatFormatting.GRAY)));
     }
 }
