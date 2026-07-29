@@ -35,12 +35,13 @@ public class ModBlocks {
 
     //Add Statues below: registerStatue(statueId, genus, poseCount, proppable, moldSize)
     public static final RegistryObject<StatueBlock> TRICERATOPS_HORRIDUS = registerStatue("triceratops_horridus", "triceratops", 5, false, MoldSize.LARGE);
+    public static final RegistryObject<StatueBlock> TARBOSAURUS_BATAAR = registerStatue("tarbosaurus_bataar", "tarbosaurus", 6, true, MoldSize.HUGE);
 
 
 
 
 
-    public static final RegistryObject<SculptorsStationBlock> SCULPTORS_STATION = BLOCKS.register("sculptors_station.json",
+    public static final RegistryObject<SculptorsStationBlock> SCULPTORS_STATION = BLOCKS.register("sculptors_station",
             () -> new SculptorsStationBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(2.5F).noOcclusion()));
 
     private static RegistryObject<StatueBlock> registerStatue(String statueId, String genus, int poseCount,

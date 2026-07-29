@@ -1,5 +1,6 @@
 {
   "block.tpap.triceratops_horridus": "Triceratops horridus Statue",
+  "block.tpap.tarbosaurus_bataar": "Tarbosaurus bataar Statue",
 
   "item.tpap.small_mold": "Small Mold",
   "item.tpap.medium_mold": "Medium Mold",
@@ -11,6 +12,7 @@
   "item.tpap.sculptors_station": "Sculptor's Station",
 
   "genus.tpap.triceratops": "Triceratops",
+  "genus.tpap.tarbosaurus": "Tarbosaurus",
 
   "moldsize.tpap.small": "Small",
   "moldsize.tpap.medium": "Medium",
