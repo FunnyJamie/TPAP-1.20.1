@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"open": {
+			"loop": true,
+			"bones": {
+				"yes": {
+					"position": {
+						"vector": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"close": {
+			"loop": true,
+			"bones": {
+				"yes": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}
