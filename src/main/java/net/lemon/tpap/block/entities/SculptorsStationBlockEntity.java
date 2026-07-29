@@ -24,7 +24,7 @@ import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class SculptorsStationBlockEntity extends BlockEntity implements GeoBlockEntity {
-    public static final int DRAWER_SLOTS = 256;
+    public static final int DRAWER_SLOTS = 261;
     private static final int EVENT_OPEN_COUNT = 1;
 
     private static final RawAnimation OPEN = RawAnimation.begin().thenPlayAndHold("open");
@@ -124,7 +124,7 @@ public class SculptorsStationBlockEntity extends BlockEntity implements GeoBlock
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "drawer_controller", 0, state -> {
+        controllers.add(new AnimationController<>(this, "drawer_controller", 10, state -> {
             if (this.open) {
                 return state.setAndContinue(OPEN);
             }

@@ -1,5 +1,6 @@
 package net.lemon.tpap.client.sculptors;
 
+import net.lemon.tpap.TPAP;
 import net.lemon.tpap.menu.SculptorsStationMenu;
 import net.lemon.tpap.registry.ModBlocks;
 import net.minecraft.client.gui.GuiGraphics;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SculptorsStationScreen extends AbstractContainerScreen<SculptorsStationMenu> {
-    private static final ResourceLocation BG_LOCATION = new ResourceLocation("textures/gui/container/stonecutter.png");
+    private static final ResourceLocation BG_LOCATION = new ResourceLocation(TPAP.MODID, "textures/gui/sculptors_station_screen.png");
     private static final int GRID_COLUMNS = 4;
     private static final int GRID_ROWS = 3;
     private static final int GRID_SIZE = GRID_COLUMNS * GRID_ROWS;
