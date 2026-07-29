@@ -1,4 +1,4 @@
-package net.lemon.tpap.client;
+package net.lemon.tpap.client.statue;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

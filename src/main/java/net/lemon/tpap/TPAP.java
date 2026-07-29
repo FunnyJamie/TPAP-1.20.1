@@ -1,12 +1,12 @@
 package net.lemon.tpap;
 
 import com.mojang.logging.LogUtils;
-import net.lemon.tpap.client.SculptorsStationBlockRenderer;
-import net.lemon.tpap.client.StatueBlockRenderer;
-import net.lemon.tpap.registry.ModBlockEntities;
-import net.lemon.tpap.registry.ModBlocks;
-import net.lemon.tpap.registry.ModCreativeModeTabs;
-import net.lemon.tpap.registry.ModItems;
+import net.lemon.tpap.client.sculptors.SculptorsStationBlockRenderer;
+import net.lemon.tpap.client.sculptors.SculptorsStationDrawerScreen;
+import net.lemon.tpap.client.sculptors.SculptorsStationScreen;
+import net.lemon.tpap.client.statue.StatueBlockRenderer;
+import net.lemon.tpap.registry.*;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +15,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -35,6 +34,7 @@ public class TPAP
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -67,7 +67,8 @@ public class TPAP
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            event.enqueueWork(() -> MenuScreens.register(ModMenuTypes.SCULPTORS_STATION_MENU.get(), SculptorsStationScreen::new));
+            event.enqueueWork(() -> MenuScreens.register(ModMenuTypes.SCULPTORS_STATION_DRAWER_MENU.get(), SculptorsStationDrawerScreen::new));
         }
 
         @SubscribeEvent

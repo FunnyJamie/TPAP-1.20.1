@@ -1,6 +1,8 @@
 package net.lemon.tpap.block.entities;
 
 import net.lemon.tpap.item.BlueprintItem;
+import net.lemon.tpap.menu.SculptorsStationDrawerMenu;
+import net.lemon.tpap.menu.SculptorsStationMenu;
 import net.lemon.tpap.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -62,8 +64,12 @@ public class SculptorsStationBlockEntity extends BlockEntity implements GeoBlock
 
         @Override
         protected boolean isOwnContainer(Player player) {
-            // TODO(menus): return true when the player's open menu (crafting
-            // or drawer) belongs to this block entity.
+            if (player.containerMenu instanceof SculptorsStationMenu menu) {
+                return menu.getStation() == SculptorsStationBlockEntity.this;
+            }
+            if (player.containerMenu instanceof SculptorsStationDrawerMenu menu) {
+                return menu.getStation() == SculptorsStationBlockEntity.this;
+            }
             return false;
         }
     };

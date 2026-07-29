@@ -1,4 +1,4 @@
-package net.lemon.tpap.client;
+package net.lemon.tpap.client.sculptors;
 
 import net.lemon.tpap.block.entities.SculptorsStationBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;

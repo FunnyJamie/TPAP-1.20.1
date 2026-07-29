@@ -23,6 +23,8 @@
 
   "creativetab.items_tab": "TPaP Items",
   "creativetab.statues_tab": "TPaP Statues",
-  "creativetab.blueprints_tab": "TPaP Blueprints"
-
+  "creativetab.blueprints_tab": "TPaP Blueprints",
+  "container.tpap.sculptors_station": "Sculptor's Station",
+  "container.tpap.sculptors_station_drawer": "Blueprint Storage Drawer",
+  "tooltip.tpap.requires_mold": "Requires %s Mold"
 }

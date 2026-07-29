@@ -1,4 +1,4 @@
-package net.lemon.tpap.client;
+package net.lemon.tpap.client.statue;
 
 import net.lemon.tpap.TPAP;
 import net.lemon.tpap.block.entities.StatueBlockEntity;

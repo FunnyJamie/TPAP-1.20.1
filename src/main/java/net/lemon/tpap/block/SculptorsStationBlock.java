@@ -1,13 +1,19 @@
 package net.lemon.tpap.block;
 
 import net.lemon.tpap.block.entities.SculptorsStationBlockEntity;
+import net.lemon.tpap.menu.SculptorsStationDrawerMenu;
+import net.lemon.tpap.menu.SculptorsStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -27,6 +33,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 public class SculptorsStationBlock extends Block implements EntityBlock {
@@ -122,11 +129,15 @@ public class SculptorsStationBlock extends Block implements EntityBlock {
             return InteractionResult.SUCCESS;
         }
         SculptorsStationBlockEntity station = getStationBlockEntity(level, pos, state);
-        if (station == null) {
+        if (station == null || !(player instanceof ServerPlayer serverPlayer)) {
             return InteractionResult.PASS;
         }
-        // TODO(menus): WORKBENCH half opens the crafting menu, DRAWER half
-        // opens the drawer menu. Both menus call station.startOpen/stopOpen.
+        MenuProvider provider = state.getValue(PART) == StationPart.WORKBENCH
+                ? new SimpleMenuProvider((id, inventory, p) -> new SculptorsStationMenu(id, inventory, station),
+                Component.translatable("container.tpap.sculptors_station"))
+                : new SimpleMenuProvider((id, inventory, p) -> new SculptorsStationDrawerMenu(id, inventory, station),
+                Component.translatable("container.tpap.sculptors_station_drawer"));
+        NetworkHooks.openScreen(serverPlayer, provider, station.getBlockPos());
         return InteractionResult.CONSUME;
     }
 
