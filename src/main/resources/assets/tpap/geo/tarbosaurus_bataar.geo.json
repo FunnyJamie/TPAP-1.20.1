@@ -484,7 +484,7 @@
 					]
 				},
 				{
-					"name": "pole1",
+					"name": "poles",
 					"parent": "root",
 					"pivot": [0, 31.23334, -22.69424],
 					"cubes": [
