@@ -70,7 +70,7 @@ public class SculptorsStationMenu extends AbstractContainerMenu {
                 return isMold(stack);
             }
         });
-        this.addSlot(new Slot(this.resultContainer, 0, 143, 38) {
+        this.addSlot(new Slot(this.resultContainer, 0, 143, 33) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return false;

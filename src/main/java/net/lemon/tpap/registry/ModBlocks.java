@@ -35,7 +35,7 @@ public class ModBlocks {
 
     //Add Statues below: registerStatue(statueId, genus, poseCount, proppable, moldSize)
     public static final RegistryObject<StatueBlock> TRICERATOPS_HORRIDUS = registerStatue("triceratops_horridus", "triceratops", 5, false, MoldSize.LARGE);
-    public static final RegistryObject<StatueBlock> TARBOSAURUS_BATAAR = registerStatue("tarbosaurus_bataar", "tarbosaurus", 6, true, MoldSize.HUGE);
+    public static final RegistryObject<StatueBlock> TARBOSAURUS_BATAAR = registerStatue("tarbosaurus_bataar", "tarbosaurus", 5, true, MoldSize.HUGE);
 
 
 
