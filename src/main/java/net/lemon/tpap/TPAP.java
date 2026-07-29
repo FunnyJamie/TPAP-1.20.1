@@ -1,6 +1,7 @@
 package net.lemon.tpap;
 
 import com.mojang.logging.LogUtils;
+import net.lemon.tpap.client.SculptorsStationBlockRenderer;
 import net.lemon.tpap.client.StatueBlockRenderer;
 import net.lemon.tpap.registry.ModBlockEntities;
 import net.lemon.tpap.registry.ModBlocks;
@@ -73,6 +74,7 @@ public class TPAP
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event)
         {
             event.registerBlockEntityRenderer(ModBlockEntities.STATUE_BE.get(), StatueBlockRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.SCULPTORS_STATION_BE.get(), SculptorsStationBlockRenderer::new);
         }
     }
 }

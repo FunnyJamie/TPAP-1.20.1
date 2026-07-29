@@ -19,7 +19,7 @@ public class ModBlockEntities {
                     ModBlocks.STATUES.stream().map(RegistryObject::get).toArray(Block[]::new)).build(null));
 
     public static final RegistryObject<BlockEntityType<SculptorsStationBlockEntity>> SCULPTORS_STATION_BE =
-            BLOCK_ENTITIES.register("sculptors_station.json", () -> BlockEntityType.Builder.of(SculptorsStationBlockEntity::new,
+            BLOCK_ENTITIES.register("sculptors_station", () -> BlockEntityType.Builder.of(SculptorsStationBlockEntity::new,
                     ModBlocks.SCULPTORS_STATION.get()).build(null));
 
 
