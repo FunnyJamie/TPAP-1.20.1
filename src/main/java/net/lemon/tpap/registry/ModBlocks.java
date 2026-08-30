@@ -39,11 +39,13 @@ public class ModBlocks {
     public static final RegistryObject<StatueBlock> MARASUCHUS_LILLOENSIS = registerStatue("marasuchus_lilloensis", "marasuchus", 5, true, MoldSize.SMALL);
     public static final RegistryObject<StatueBlock> BARINASUCHUS_ARVELOI = registerStatue("barinasuchus_arveloi", "barinasuchus", 5, true, MoldSize.MEDIUM);
     public static final RegistryObject<StatueBlock> PACHYRHINOSAURUS_CANADENSIS = registerStatue("pachyrhinosaurus_canadensis", "pachyrhinosaurus", 5, true, MoldSize.LARGE);
-    public static final RegistryObject<StatueBlock> TARBOSAURUS_BATAAR = registerStatue("tarbosaurus_bataar", "tarbosaurus", 5, true, MoldSize.HUGE);
     public static final RegistryObject<StatueBlock> DESMODUS_DRACULAE = registerStatue("desmodus_draculae", "desmodus", 5, true, MoldSize.SMALL);
     public static final RegistryObject<StatueBlock> ASILISAURUS_KONGWE = registerStatue("asilisaurus_kongwe", "asilisaurus", 5, true, MoldSize.SMALL);
     public static final RegistryObject<StatueBlock> KARPINSKIPRION_IVANOVI = registerStatue("karpinskiprion_ivanovi", "karpinskiprion", 5, true, MoldSize.LARGE);
     public static final RegistryObject<StatueBlock> PARADICEROS_MUKIRII = registerStatue("paradiceros_mukirii", "paradiceros", 5, true, MoldSize.MEDIUM);
+    public static final RegistryObject<StatueBlock> LIVYATAN_MELVILLEI = registerStatue("livyatan_melvillei", "livyatan", 6, true, MoldSize.HUGE);
+    public static final RegistryObject<StatueBlock> MEGALONYX_JEFFERSONII = registerStatue("megalonyx_jeffersonii", "megalonyx", 7, true, MoldSize.MEDIUM);
+
 
 
 
