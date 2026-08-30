@@ -1,6 +1,10 @@
 {
   "block.tpap.triceratops_horridus": "Triceratops horridus Statue",
   "block.tpap.tarbosaurus_bataar": "Tarbosaurus bataar Statue",
+  "block.tpap.marasuchus_lilloensis": "Marasuchus lilloensis Statue",
+  "block.tpap.barinasuchus_arveloi": "Barinasuchus arveloi Statue",
+  "block.tpap.pachyrhinosaurus_canadensis": "Pachyrhinosaurus canadensis Statue",
+
 
   "item.tpap.small_mold": "Small Mold",
   "item.tpap.medium_mold": "Medium Mold",
@@ -13,6 +17,10 @@
 
   "genus.tpap.triceratops": "Triceratops",
   "genus.tpap.tarbosaurus": "Tarbosaurus",
+  "genus.tpap.marasuchus": "Marasuchus",
+  "genus.tpap.barinasuchus": "Barinasuchus",
+  "genus.tpap.pachyrhinosaurus": "Pachyrhinosaurus",
+
 
   "moldsize.tpap.small": "Small",
   "moldsize.tpap.medium": "Medium",
