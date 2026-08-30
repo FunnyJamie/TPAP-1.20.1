@@ -37,6 +37,10 @@ public class ModBlocks {
     public static final RegistryObject<StatueBlock> TRICERATOPS_HORRIDUS = registerStatue("triceratops_horridus", "triceratops", 5, false, MoldSize.LARGE);
     public static final RegistryObject<StatueBlock> TARBOSAURUS_BATAAR = registerStatue("tarbosaurus_bataar", "tarbosaurus", 5, true, MoldSize.HUGE);
     public static final RegistryObject<StatueBlock> DESMODUS_DRACULAE = registerStatue("desmodus_draculae", "desmodus", 5, true, MoldSize.SMALL);
+    public static final RegistryObject<StatueBlock> ASILISAURUS_KONGWE = registerStatue("asilisaurus_kongwe", "asilisaurus", 5, true, MoldSize.SMALL);
+    public static final RegistryObject<StatueBlock> KARPINSKIPRION_IVANOVI = registerStatue("karpinskiprion_ivanovi", "karpinskiprion", 5, true, MoldSize.LARGE);
+    public static final RegistryObject<StatueBlock> PARADICEROS_MUKIRII = registerStatue("paradiceros_mukirii", "paradiceros", 5, true, MoldSize.MEDIUM);
+
 
 
 
