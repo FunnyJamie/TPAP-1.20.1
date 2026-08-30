@@ -4,6 +4,13 @@
   "block.tpap.marasuchus_lilloensis": "Marasuchus lilloensis Statue",
   "block.tpap.barinasuchus_arveloi": "Barinasuchus arveloi Statue",
   "block.tpap.pachyrhinosaurus_canadensis": "Pachyrhinosaurus canadensis Statue",
+  "block.tpap.desmodus_draculae": "Desmodus draculae Statue",
+  "block.tpap.asilisaurus_kongwe": "Asilisaurus kongwe Statue",
+  "block.tpap.karpinskiprion_ivanovi": "Karpinskiprion ivanovi Statue",
+  "block.tpap.paradiceros_mukirii": "Paradiceros mukirii Statue",
+
+
+
 
 
   "item.tpap.small_mold": "Small Mold",
@@ -20,6 +27,14 @@
   "genus.tpap.marasuchus": "Marasuchus",
   "genus.tpap.barinasuchus": "Barinasuchus",
   "genus.tpap.pachyrhinosaurus": "Pachyrhinosaurus",
+  "genus.tpap.desmodus": "Desmodus",
+  "genus.tpap.asilisaurus": "Asilisaurus",
+  "genus.tpap.karpinskiprion": "Karpinskiprion",
+  "genus.tpap.paradiceros": "Paradiceros",
+
+
+
+
 
 
   "moldsize.tpap.small": "Small",
