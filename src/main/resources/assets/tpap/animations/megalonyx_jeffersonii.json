@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"Pose0": {
+		"pose0": {
 			"loop": true,
 			"bones": {
 				"bodyBack": {
@@ -17,7 +17,7 @@
 				}
 			}
 		},
-		"Pose1": {
+		"pose1": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
@@ -164,7 +164,7 @@
 				}
 			}
 		},
-		"Pose2": {
+		"pose2": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
@@ -322,7 +322,7 @@
 				}
 			}
 		},
-		"Pose3": {
+		"pose3": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
@@ -460,7 +460,7 @@
 				}
 			}
 		},
-		"Pose4": {
+		"pose4": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
@@ -597,7 +597,7 @@
 				}
 			}
 		},
-		"Pose5": {
+		"pose5": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
@@ -674,7 +674,7 @@
 				}
 			}
 		},
-		"Pose6": {
+		"pose6": {
 			"loop": true,
 			"bones": {
 				"leftArm": {
